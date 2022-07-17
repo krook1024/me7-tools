@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
-	<id>KRKTE</id>
-	<pattern>F2 F4 XX XX 7C 44 E0 05 70 55</pattern>
-	<address>
-		<offset>2</offset>
-		<dppOffset>-2</dppOffset>
-	</address>
+	<id>MLOFS</id>
+	<pattern>E0 XX F2 XX MMXX XX E0 XX 20 XX 30 XX F2</pattern>
+	<pattern>5C XX 70 XX F6 XX XX XX F2 XX XX XX 22 XX MMXX XX 8D 04</pattern>
 	<conversion>
-		<factor>0.000111111</factor>
-		<width>2</width>
 		<endianness>LoHi</endianness>
 	</conversion>
 </map>
