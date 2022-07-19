@@ -64,8 +64,13 @@ public class PatternMatcher {
     for (int i = 0; i < tokens.length; i++) {
       String token = tokens[i];
 
-      if (tokens[i].startsWith("$$")) {
-        int index = Integer.parseInt(tokens[i].substring(2));
+      if (token.startsWith("MM")) {
+        token = token.substring(2);
+        marker = curpos;
+      }
+  
+      if (token.startsWith("$$")) {
+        int index = Integer.parseInt(token.substring(2));
 	int pos = matches.get(index);
 	if (pos==-1) return -1;
 	if (binary[curpos] != binary[pos]) return -1;
@@ -73,11 +78,6 @@ public class PatternMatcher {
 	if (binary[curpos] != binary[pos + 1]) return -1;
 	curpos++;
 	continue;
-      }
-      
-      if (tokens[i].startsWith("MM")) {
-        token = tokens[i].substring(2);
-        marker = curpos;
       }
       
       if (token.equals("XX")) {
