@@ -122,4 +122,8 @@ public class LocatedMap {
   public void setExternal(byte[] external) {
     this.external = external;
   }
+  
+  public byte[] getExternal() {
+	  return external;
+  }
 }

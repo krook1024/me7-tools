@@ -1,5 +1,6 @@
 package com.prj.tuning.maplocator.export.xdf.model;
 
+import com.prj.tuning.maplocator.model.LocatedMap;
 import com.prj.tuning.xdf.binding.XdfAxis;
 import com.prj.tuning.xdf.binding.XdfLabel;
 
@@ -13,6 +14,12 @@ public class ExternalAxis extends XdfAxis {
   public ExternalAxis(String dimension, LocatedMap locatedMap) {
     this.dimension = dimension;
     //this.values = values;
+	values = new ArrayList<String>();
+	double factor = locatedMap.getFactor() == 0 ? 1 : locatedMap.getFactor();
+	byte[] external = locatedMap.getExternal();
+	for (int i = 0; i < external.length; i++) {
+		values.add(String.format("%.2f",(external[i] & 0xFF) * factor));
+	}
   }
 
   @Override

@@ -9,6 +9,7 @@ import java.util.Iterator;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.lang.Math;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
@@ -379,6 +380,29 @@ public class Me7XmlPlugin implements LocatorPlugin {
 					}
 
 					setAddress(getAddress() + getWidth());
+					
+					if ((getLength() == 0) &&(getWidth() == 1)) {
+						/* 
+						Support for external axis values (Smart MEG ecu is using calculated axis)
+						If length is 0 this means that the values of the axis are not explicitely listed and must be calculated
+						In this case we must retrieve the starting value, the step value and the total amount of values
+						Then we calculate the values and store them as external values in LocatedMap
+						Length will remain at 0 and addrees will be shifted to the beginning of next block therefore relative positioning of tables should still work
+						XDF export will have to skip axis tables whose contains external values and will have to populate external axis values for the map tables
+						*/
+						int value = binary[getAddress()] & 0xFF;
+						setAddress(getAddress() + getWidth());
+						double step = Math.pow(2, binary[getAddress()] & 0xFF);
+						setAddress(getAddress() + getWidth());
+						int count = binary[getAddress()] & 0xFF;
+						setAddress(getAddress() + getWidth());
+						byte[] values = new byte[count];
+						for (int i = 0; i < count; i++) {
+							values[i] = (byte)value;
+							value += step;
+						}
+						setExternal(values);
+					}
 				}
 			}
 		}
