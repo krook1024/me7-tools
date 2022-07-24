@@ -26,6 +26,7 @@ import com.prj.tuning.maplocator.util.Logger;
 public class Me7XmlPlugin implements LocatorPlugin {
 	private static Logger log = new Logger(Me7XmlPlugin.class);
 	private static Make m;
+	private static Variant v = Variant.UNDEFINED;
 
 	public Collection<? extends LocatedMap> locateMaps(final byte[] binary) {
 		PatternMatcher.clearCache();
@@ -46,9 +47,17 @@ public class Me7XmlPlugin implements LocatorPlugin {
 		}
 
 		byte[] smartSearch = { 0x30, 0x32, 0x36, 0x31, 0x32, 0x30, 0x35, 0x30, 0x30 };	//Pattern "026120500"
-		boolean smart = indexOf(binary, smartSearch) > -1;
-		if (smart) {
+		int smart = indexOf(binary, smartSearch);
+		if (smart > -1) {
 			m = Make.SMART;
+			switch(binary[smart + smartSearch.length]) {
+				case 0x35:
+					v = Variant.SMART_450;
+					break;
+				case 0x36:
+					v = Variant.SMART_452;
+					break;
+			}
 		}
 		
 		try {
@@ -225,7 +234,17 @@ public class Me7XmlPlugin implements LocatorPlugin {
 			dpp = 0x204;
 			break;
 		case SMART:
-			dpp = 0x6;
+			switch (v) {
+				case SMART_450:
+					dpp = 0x4;
+					break;
+				case SMART_452:
+					dpp = 0x6;
+					break;
+				default:
+					dpp = 0x4;
+					break;
+			}
 			break;
 		default:
 			dpp = 0204;
@@ -421,5 +440,18 @@ public class Me7XmlPlugin implements LocatorPlugin {
 		}
 
 	}
+	
+	public enum Variant {
 
+		UNDEFINED, SMART_450, SMART_452;
+
+		public String value() {
+			return name();
+		}
+
+		public static Variant fromValue(String v) {
+			return valueOf(v);
+		}
+
+	}
 }
