@@ -29,7 +29,7 @@ public class Project extends XdfProject {
   
   public Project(Collection<LocatedMap> locatedMaps, int size) {
     for (LocatedMap locatedMap : locatedMaps) {
-      tables.add(new Table(locatedMap));
+      if (!locatedMap.isExternal()) tables.add(new Table(locatedMap));
     }
     this.size = size;
   }

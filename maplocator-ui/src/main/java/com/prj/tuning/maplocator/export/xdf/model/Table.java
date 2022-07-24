@@ -35,7 +35,8 @@ public class Table extends XdfTable {
     if (locatedMap.getyAxis() == null) {
       return new DummyAxis("y", locatedMap.getLength() == 0 ? 1 : locatedMap.getLength());
     } else {
-      return new Axis("y", locatedMap.getyAxis());
+		if (locatedMap.getyAxis().isExternal()) return new ExternalAxis("y", locatedMap.getyAxis());
+		  else return new Axis("y", locatedMap.getyAxis());
     }
   }
 
@@ -44,7 +45,8 @@ public class Table extends XdfTable {
     if (locatedMap.getxAxis() == null) {
       return new DummyAxis("x", 1);
     } else {
-      return new Axis("x", locatedMap.getxAxis());
+		if (locatedMap.getxAxis().isExternal()) return new ExternalAxis("x", locatedMap.getxAxis());
+			else return new Axis("x", locatedMap.getxAxis());
     }
   }
 
