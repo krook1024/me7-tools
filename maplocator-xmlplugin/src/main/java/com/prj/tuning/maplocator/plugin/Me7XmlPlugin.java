@@ -396,9 +396,9 @@ public class Me7XmlPlugin implements LocatorPlugin {
 						setAddress(getAddress() + getWidth());
 						int count = binary[getAddress()] & 0xFF;
 						setAddress(getAddress() + getWidth());
-						byte[] values = new byte[count];
+						int[] values = new int[count];
 						for (int i = 0; i < count; i++) {
-							values[i] = (byte)value;
+							values[i] = value;
 							value += step;
 						}
 						setExternal(values);

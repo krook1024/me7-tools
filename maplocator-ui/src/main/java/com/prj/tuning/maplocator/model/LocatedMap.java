@@ -13,7 +13,7 @@ public class LocatedMap {
   private LocatedMap yAxis;
   private boolean signed;
   private boolean axis;
-  private byte[] external;
+  private int[] external;
   
   public enum Endianness {
     BIGENDIAN, LITTLEENDIAN;
@@ -119,11 +119,11 @@ public class LocatedMap {
     return (external != null);
   }
 
-  public void setExternal(byte[] external) {
+  public void setExternal(int[] external) {
     this.external = external;
   }
   
-  public byte[] getExternal() {
+  public int[] getExternal() {
 	  return external;
   }
 }

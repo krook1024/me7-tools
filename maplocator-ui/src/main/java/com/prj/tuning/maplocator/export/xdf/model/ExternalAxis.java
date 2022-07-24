@@ -16,9 +16,9 @@ public class ExternalAxis extends XdfAxis {
     //this.values = values;
 	values = new ArrayList<String>();
 	double factor = locatedMap.getFactor() == 0 ? 1 : locatedMap.getFactor();
-	byte[] external = locatedMap.getExternal();
+	int[] external = locatedMap.getExternal();
 	for (int i = 0; i < external.length; i++) {
-		values.add(String.format("%.2f",(external[i] & 0xFF) * factor));
+		values.add(String.format("%.2f",external[i] * factor));
 	}
   }
 
