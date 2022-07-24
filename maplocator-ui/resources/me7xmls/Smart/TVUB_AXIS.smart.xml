@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
+	<id>TVUB_AXIS</id>
+	<title>TVUB_AXIS - Injector Latency</title>
+	<pattern>F7 FA D7 81 E6 F1 MMXX XX C2 F5</pattern>
+	<conversion>
+		<factor>0.101707773437</factor>
+		<signed>false</signed>
+	</conversion>
+</map>
