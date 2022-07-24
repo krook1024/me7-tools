@@ -5,7 +5,7 @@
 	<title>TVUB - Injector Latency</title>
 	<afterRowAxis>true</afterRowAxis>
 	<conversion>
-		<factor>0.040157</factor>
+		<factor>40</factor>
 		<signed>false</signed>
 	</conversion>
 	<rowAxis>
