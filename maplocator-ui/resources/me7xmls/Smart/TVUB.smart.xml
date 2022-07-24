@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
-	<id>FGAT0</id>
-	<title>FGAT0 - Injector Factor</title>
-	<pattern>C2 FB MMXX XX 5C 1B 1B 4B F2 F4 XX XX C2 F6 XX XX 9A XX XX XX C2 F6 XX XX 1B 46</pattern>
+	<id>TVUB</id>
+	<title>TVUB - Injector Latency</title>
+	<afterRowAxis>true</afterRowAxis>
 	<conversion>
-		<factor>1</factor>
+		<factor>0.04</factor>
 		<signed>false</signed>
 	</conversion>
+	<rowAxis>
+		<id>TVUB_AXIS</id>
+	</rowAxis>
 </map>
