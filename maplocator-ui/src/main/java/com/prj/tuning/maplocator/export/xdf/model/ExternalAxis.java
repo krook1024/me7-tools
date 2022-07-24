@@ -6,6 +6,7 @@ import com.prj.tuning.xdf.binding.XdfLabel;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class ExternalAxis extends XdfAxis {
   private String dimension;
@@ -13,12 +14,11 @@ public class ExternalAxis extends XdfAxis {
   
   public ExternalAxis(String dimension, LocatedMap locatedMap) {
     this.dimension = dimension;
-    //this.values = values;
 	values = new ArrayList<String>();
 	double factor = locatedMap.getFactor() == 0 ? 1 : locatedMap.getFactor();
 	int[] external = locatedMap.getExternal();
 	for (int i = 0; i < external.length; i++) {
-		values.add(String.format("%.2f",external[i] * factor));
+		values.add(String.format(Locale.ROOT, "%.2f",external[i] * factor));
 	}
   }
 
