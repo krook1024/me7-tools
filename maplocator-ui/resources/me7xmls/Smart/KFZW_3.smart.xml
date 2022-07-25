@@ -6,7 +6,7 @@
 	<pattern>F2 F4 XX XX F2 F5 XX XX E6 F7 10 00 E6 F1 MMXX XX 8A XX XX XX E6 F1 XX XX</pattern>
 	<conversion>
 		<factor>0.75</factor>
-		<offset></offset>
+		<offset>-60</offset>
 		<signed>true</signed>
 	</conversion>
  	<rowAxis>
