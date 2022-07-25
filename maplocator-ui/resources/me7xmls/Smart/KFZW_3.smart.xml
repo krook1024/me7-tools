@@ -2,16 +2,17 @@
 <map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
 	<id>KFZW_3</id>
-	<title>KFZW_3 - 45kw Ignition Timing</title>
+	<title>KFZW_3 - 45kw Ignition Angle Partial Load</title>
 	<pattern>F2 F4 XX XX F2 F5 XX XX E6 F7 10 00 E6 F1 MMXX XX 8A XX XX XX E6 F1 XX XX</pattern>
 	<conversion>
-		<factor>1</factor>
+		<factor>0.75</factor>
+		<offset></offset>
 		<signed>true</signed>
 	</conversion>
  	<rowAxis>
-		<id>NISTV16</id>
+		<id>TL8V16</id>
 	</rowAxis>
 	<colAxis>
-		<id>TL8V16</id>
+		<id>NISTV16</id>
 	</colAxis>
 </map>
