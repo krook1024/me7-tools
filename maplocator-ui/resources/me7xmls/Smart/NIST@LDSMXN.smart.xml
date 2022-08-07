@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
-	<id>NISTV08@LDSMXN</id>
-	<title>NISTV08@LDSMXN - RPM Breakpoints</title>
+	<id>NIST@LDSMXN</id>
+	<title>NIST@LDSMXN - RPM Breakpoints</title>
 	<pattern>9A XX 03 70 E6 F1 XX XX 0D 02 E6 F1 XX XX F2 F5 MMXX XX DA XX XX XX F7 FA XX XX 9A XX 07 F0 F3 F1 XX XX 43 F1 XX XX FD 02 XX XX 0D 02 F3 F7|E6 F1 MMXX XX C2 F4 XX XX C2 F5 $$0 DA</pattern>
 	<conversion>
 		<factor>25</factor>
