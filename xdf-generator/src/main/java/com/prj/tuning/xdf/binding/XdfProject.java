@@ -8,7 +8,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "XDFFORMAT")
 @XmlType(propOrder={"XDFHEADER", "XDFTABLE", "XDFCONSTANT"})
-
 public abstract class XdfProject {
   public static final String ADDRESS_FORMAT = "0x%X";
 
