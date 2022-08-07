@@ -6,7 +6,8 @@
 	<pattern>43 F2 XX XX 9D 03 F2 FD MMXX XX</pattern>
 	<conversion>
 		<factor>1</factor>
+		<width>2</width>
+		<endianness>LoHi</endianness>
 		<signed>false</signed>
 	</conversion>
-	<width>2</width>
 </map>
