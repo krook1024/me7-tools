@@ -9,9 +9,9 @@
 		<signed>false</signed>
 	</conversion>
  	<rowAxis>
-		<id>PSV16</id>
+		<id>PS@KFFPS</id>
 	</rowAxis>
 	<colAxis>
-		<id>NISTV16</id>
+		<id>NIST@KFFPS</id>
 	</colAxis>
 </map>
