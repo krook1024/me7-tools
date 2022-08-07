@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
-	<id>KFLFV</id>
-	<title>KFLFV - Fuelling At Full Load</title>
-	<pattern>02 70 E6 F1 MMXX XX F2 F4 XX XX F2 F5</pattern>
+	<id>NIST@KFLFV</id>
+	<title>NIST@KFLFV - RPM Breakpoints</title>
+	<pattern>02 70 E6 F1 XX XX F2 F4 XX XX F2 F5 MMXX XX|F6 F5 XX XX E6 F1 MMXX XX C2 F4 XX XX C2 F5 $$0 DA</pattern>
 	<conversion>
-		<factor>0.0078125</factor>
+		<factor>25</factor>
 		<signed>false</signed>
 	</conversion>
- 	<rowAxis>
-		<id>TL8@KFLFV</id>
-	</rowAxis>
-	<colAxis>
-		<id>NIST@KFLFV</id>
-	</colAxis>
 </map>
