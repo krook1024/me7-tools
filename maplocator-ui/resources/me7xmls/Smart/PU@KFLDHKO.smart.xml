@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
 	<id>PU@KFLDHKO</id>
 	<title>PU@KFLDHKO - Ambient Pressure</title>
-	<pattern>9D 04 E7 F1 XX XX F7 F1 XX XX E6 F1 XX XX F2 F5 MMXX XX F2 F4 XX XX E0 XX DA|F7 F2 XX XX E6 F1 MMXX XX F2 F2 $$0 XX XX C2 F4 XX XX DA</pattern>
+	<pattern>9D 04 E7 F1 XX XX F7 F1 XX XX E6 F1 XX XX F2 F5 MMXX XX F2 F4 XX XX E0 XX DA|E6 F1 MMXX XX F2 F2 $$0 XX XX C2 F4 XX XX DA</pattern>
 	<conversion>
 		<factor>1</factor>
 		<signed>false</signed>
