@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
+	<id>TNMAXK</id>
+	<title>TNMAXK - Time For Short-Term Limit Speed</title>
+	<pattern>40 01 9D 05 F3 F2 MMXX XX</pattern>
+	<conversion>
+		<factor>0.1</factor>
+		<signed>false</signed>
+	</conversion>
+</map>
