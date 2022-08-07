@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
-	<id>TVUB</id>
-	<title>TVUB - Injector Latency</title>
-	<afterRowAxis>true</afterRowAxis>
+	<id>NIST@KFLF</id>
+	<title>NIST@KFLF - RPM Breakpoints</title>
+	<pattern>0B 90 E6 F1 XX XX F2 F4 XX XX F2 F5 MMXX XX|F6 F5 XX XX E6 F1 MMXX XX C2 F4 XX XX C2 F5 $$0 DA</pattern>
 	<conversion>
-		<factor>40</factor>
+		<factor>25</factor>
 		<signed>false</signed>
 	</conversion>
-	<rowAxis>
-		<id>UBATT@TVUB</id>
-	</rowAxis>
 </map>
