@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
-	<id>TVUB_AXIS</id>
-	<title>TVUB_AXIS - Injector Latency</title>
+	<id>UBATT@TVUB</id>
+	<title>UBATT@TVUB - Voltage</title>
 	<pattern>F7 FA XX XX E6 F1 MMXX XX C2 F5 XX XX 9A</pattern>
 	<conversion>
 		<factor>0.101708</factor>
