@@ -10,9 +10,9 @@
 		<signed>false</signed>
 	</conversion>
  	<rowAxis>
-		<id>NISTV16</id>
+		<id>NIST@KFLDS</id>
 	</rowAxis>
 	<colAxis>
-		<id>SWVREV8</id>
+		<id>SWVRE@KFLDS</id>
 	</colAxis>
 </map>
