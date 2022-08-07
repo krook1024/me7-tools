@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
+	<id>VNMAXAT</id>
+	<title>VNMAXAT - Speed Threshold For Gear Protection</title>
+	<pattern>43 F2 MMXX XX 9D 03 F2 FD XX XX</pattern>
+	<conversion>
+		<factor>1.2</factor>
+		<signed>false</signed>
+	</conversion>
+	<width>1</width>
+</map>
