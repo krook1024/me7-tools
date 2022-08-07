@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
 	<id>SWVRE@KFDDK</id>
 	<title>SWVRE@KFDDK - Throttle Opening</title>
-	<pattern>E6 F1 XX XX F2 F4 XX XX F2 F5 MMXX XX E0 87 DA XX XX XX F1 BA 7C 15 00 F5 7D 02 E6 FF FF 7F F3 F1|F7 FA XX XX E6 F1 MMXX XX F2 F2 $$0 C0 45 C2 F4 XX XX DA</pattern>	
+	<pattern>E6 F1 XX XX F2 F4 XX XX F2 F5 MMXX XX E0 87 DA XX XX XX F1 BA 7C 15 00 F5 7D 02 E6 FF FF 7F F3 F1|F6 F5 XX XX E6 F1 MMXX XX C2 F4 XX XX C2 F5 $$0 DA</pattern>	
 	<conversion>
 		<factor>0.316078</factor>
 		<signed>false</signed>
