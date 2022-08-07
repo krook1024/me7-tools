@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
 	<id>LDSMXN</id>
 	<title>LDSMXN - Steady Boost Limit</title>
-	<pattern>02 70 E6 F1 XX XX F2 F4 XX XX F2 F5 MMXX XX|9A XX 03 70 E6 F1 XX XX 0D 02 E6 F1 MMXX XX F2 F5 $$0 DA XX XX XX F7 FA</pattern>
+	<pattern>9A XX 03 70 E6 F1 XX XX 0D 02 E6 F1 MMXX XX F2 F5 XX XX DA XX XX XX F7 FA XX XX 9A XX 07 F0 F3 F1 XX XX 43 F1 XX XX FD 02 XX XX 0D 02 F3 F7</pattern>
 	<conversion>
 		<factor>0.01024</factor>
 		<offset>-1</offset>
 		<signed>false</signed>
 	</conversion>
  	<rowAxis>
-		<id>NISTV08</id>
+		<id>NIST@LDSMXN</id>
 	</rowAxis>
 </map>
