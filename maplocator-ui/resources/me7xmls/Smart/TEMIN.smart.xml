@@ -2,7 +2,7 @@
 <map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
 	<id>TEMIN</id>
-	<title>TEMIN - Minimum Injection Value</title>
+	<title>TEMIN - Minimum Injection Value (ms)</title>
 	<pattern>F2 07 1E FF F2 FC MMXX XX</pattern>
 		<conversion>
 		<factor>0.00266670</factor>
