@@ -14,7 +14,6 @@ import com.prj.tuning.xdf.binding.XdfProject;
 import com.prj.tuning.xdf.binding.XdfRegion;
 import com.prj.tuning.xdf.binding.XdfTable;
 import com.prj.tuning.xdf.binding.XdfConstant;
-import com.prj.tuning.xdf.olsimpl.OlsAxisMap;
 import com.prj.tuning.xdf.olsimpl.OlsProject;
 
 public class Project extends XdfProject {
@@ -46,18 +45,21 @@ public class Project extends XdfProject {
       @Override
       public Collection<XdfCategory> getCategories() {
         List<XdfCategory> categories = new ArrayList<XdfCategory>();
-        categories.add(new XdfCategory() {
+		
+		for (TableCategory c : TableCategory.CATEGORIES) {
+			categories.add(new XdfCategory() {
           
-          @Override
-          public String getName() {
-            return "Axes";
-          }
-          
-          @Override
-          public int getIndex() {
-            return OlsAxisMap.AXIS_CATEGORY;
-          }
-        });
+			  @Override
+			  public String getName() {
+				return c.getName();
+			  }
+			  
+			  @Override
+			  public int getIndex() {
+				return c.getIndex() - 1;
+			  }
+			});
+		}
         return categories;
       }
 

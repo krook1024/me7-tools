@@ -10,7 +10,6 @@ import com.prj.tuning.xdf.binding.XdfCategoryMem;
 import com.prj.tuning.xdf.binding.XdfEmbedded;
 import com.prj.tuning.xdf.binding.XdfMath;
 import com.prj.tuning.xdf.binding.XdfTable;
-import com.prj.tuning.xdf.olsimpl.OlsAxisMap;
 import com.prj.tuning.xdf.olsimpl.OlsProject;
 
 public class Table extends XdfTable {
@@ -94,8 +93,8 @@ public class Table extends XdfTable {
 
   @Override
   public XdfCategoryMem getCategory() {
-    if (locatedMap.isAxis()) {
-      return new XdfCategoryMem() {
+	for (TableCategory c : TableCategory.CATEGORIES) {
+		if (c.isMatching(locatedMap)) return new XdfCategoryMem() {
         
         @Override
         public int getIndex() {
@@ -104,10 +103,10 @@ public class Table extends XdfTable {
         
         @Override
         public int getCategory() {
-          return OlsAxisMap.AXIS_CATEGORY;
+          return c.getIndex();
         }
       };
-    }
+	}
     return null;
   }
 
