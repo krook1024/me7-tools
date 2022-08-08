@@ -4,8 +4,10 @@
 	<id>TEMIN</id>
 	<title>TEMIN - Minimum Injection Value</title>
 	<pattern>F2 07 1E FF F2 FC MMXX XX</pattern>
-	<conversion>
-		<factor>0.019608</factor>
+		<conversion>
+		<factor>0.00266670</factor>
+		<width>2</width>
+		<endianness>LoHi</endianness>
 		<signed>false</signed>
 	</conversion>
 </map>
