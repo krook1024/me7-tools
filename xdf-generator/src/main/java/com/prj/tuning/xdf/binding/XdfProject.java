@@ -5,6 +5,7 @@ import java.util.Collection;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement(name = "XDFFORMAT")
 @XmlType(propOrder={"XDFHEADER", "XDFTABLE", "XDFCONSTANT"})
