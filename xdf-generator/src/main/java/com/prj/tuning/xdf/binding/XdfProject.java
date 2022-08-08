@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement(name = "XDFFORMAT")
-@XmlType(propOrder={"XdfHeader", "tables", "constants"})
+@XmlType(propOrder={"xdfHeader", "tables", "constants"})
 public abstract class XdfProject {
   public static final String ADDRESS_FORMAT = "0x%X";
 
