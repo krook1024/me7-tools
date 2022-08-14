@@ -157,8 +157,7 @@ public class Me7XmlPlugin implements LocatorPlugin {
 	private static LocatedMapWithXml getLocatedMap(Map map, byte[] binary)
 			throws Exception {
 
-		LocatedMapWithXml lMap = new LocatedMapWithXml();
-		lMap.map = map;
+		LocatedMapWithXml lMap = new LocatedMapWithXml(map);
 
 		int patternLocation = 0;
 
@@ -204,7 +203,7 @@ public class Me7XmlPlugin implements LocatorPlugin {
 		return lMap;
 	}
 
-	public static void transferConversion(LocatedMapWithXml lMap,
+	public static void transferConversion(LocatedMap lMap,
 			Conversion conversion) throws Exception {
 
 		BeanUtil.transferValue(conversion, lMap, "factor", "factor", 1.0);
@@ -382,7 +381,12 @@ public class Me7XmlPlugin implements LocatorPlugin {
 	}
 
 	private static class LocatedMapWithXml extends LocatedMap {
+		
 		private Map map;
+		
+		private LocatedMapWithXml(Map map) {
+			this.map = map;
+			}
 
 		private void setAxis(byte[] binary) throws Exception {
 			if (!isAxis()) {
@@ -400,7 +404,7 @@ public class Me7XmlPlugin implements LocatorPlugin {
 
 					setAddress(getAddress() + getWidth());
 					
-					if ((getLength() == 0) &&(getWidth() == 1)) {
+					if ((getLength() == 0) && (getWidth() == 1)) {
 						/* 
 						Support for external axis values (Smart MEG ecu is using calculated axis)
 						If length is 0 this means that the values of the axis are not explicitely listed and must be calculated
