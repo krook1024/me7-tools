@@ -47,7 +47,7 @@ public class Ui {
     Display display = new Display();
     shell = new Shell(display, SWT.CLOSE | SWT.TITLE | SWT.MIN);
     shell.setText("Map Locator");
-    shell.setBounds(100, 50, 500, 600);
+    shell.setBounds(200, 100, 500, 600);
     
     GridLayout layout = new GridLayout(2, false);
     shell.setLayout(layout);
