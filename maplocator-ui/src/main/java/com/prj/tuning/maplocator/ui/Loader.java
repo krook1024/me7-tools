@@ -27,15 +27,20 @@ public class Loader {
     if (osName.length() == 0) throw new RuntimeException("Unknown OS name: " + osName);
     String archPart = osArch.equals("amd64") ? "x86_64" : osArch.equals("arm64") ? "aarch64" : osArch;
 
+	boolean swtRuntimeFound = false;
 	List<URL> libUrls = new ArrayList<URL>();	
 	File swtLibs = new File(System.getProperty("lib.override.dir", "lib"), "swt");
 	for (File f : swtLibs.listFiles()) {
 		String n = f.getName().toLowerCase();
 		  if (n.endsWith(".jar")) {
-			if ((n.contains(osPart)) && (n.contains(archPart))) libUrls.add(f.toURI().toURL());
+			if ((n.contains(osPart)) && (n.contains(archPart))) {
+				libUrls.add(f.toURI().toURL());
+				swtRuntimeFound = true;
+				}
 			else if ((!n.contains("linux")) && (!n.contains("win32")) && (!n.contains("macosx"))) libUrls.add(f.toURI().toURL());
 		  }
-    }	
+    }
+	if (!swtRuntimeFound) throw new RuntimeException("SWT runtime missing for " + osName + " " + archPart);
 	URL[] urls = new URL[libUrls.size()];
 	libUrls.toArray(urls);
 	URLClassLoader cl = new URLClassLoader(urls, Loader.class.getClassLoader());
