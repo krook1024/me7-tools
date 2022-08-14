@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.TreeMap;
+import java.util.concurrent.Executor;
 
 import javax.xml.bind.JAXBException;
 
@@ -162,7 +163,7 @@ public class Ui {
         currentMaps.clear();
         xdfDumpButton.setEnabled(false);
         setStatus("Analyzing...");
-        callbacksLeft = PluginManager.findMaps(FileUtil.readFile(fileName.getText()), new AnalyzeCallback());
+        callbacksLeft = PluginManager.findMaps(FileUtil.readFile(fileName.getText()), new AnalyzeCallback(), new DisplayExecutor());
       }
       catch (IOException ex) {
         throw new RuntimeException(ex);
@@ -202,6 +203,13 @@ public class Ui {
         item.setText(new String[] {map.getId(), String.format("0x%X", map.getAddress())});
       }
     }
+  }
+  
+  private class DisplayExecutor implements Executor {
+	  
+	  public void execute(Runnable r) {
+		  Display.getDefault().asyncExec(r);
+	  }
   }
   
   private class XdfDumpHandler implements SelectionListener {

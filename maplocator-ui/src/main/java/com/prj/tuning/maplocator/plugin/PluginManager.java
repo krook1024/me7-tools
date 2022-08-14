@@ -3,10 +3,9 @@ package com.prj.tuning.maplocator.plugin;
 import java.net.URL;
 import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.Executor;
 
-import org.eclipse.swt.widgets.Display;
 import org.reflections.Reflections;
-import org.reflections.util.ConfigurationBuilder;
 
 import com.prj.tuning.maplocator.util.Logger;
 
@@ -19,9 +18,9 @@ public class PluginManager {
   private static boolean initialized = false;
   private static Logger log = new Logger(PluginManager.class);
  
-  public static void initialize(List<URL> libUrls) {
+  public static void initialize() {
     if (!initialized) {
-      Reflections reflections = new Reflections(new ConfigurationBuilder().setUrls(libUrls));
+      Reflections reflections = new Reflections(PluginManager.class.getPackage().getName());
       plugins = reflections.getSubTypesOf(LocatorPlugin.class);
       for (Class<? extends LocatorPlugin> klazz : plugins) {
         log.log("Loaded plugin: " + klazz.getSimpleName());
@@ -37,7 +36,7 @@ public class PluginManager {
    * @param callback the callback that is called when a plugin completes work.
    * @return number of threads (and thus calls to the callback function)
    */
-  public static int findMaps(byte[] binary, PluginCallback callback) {
+  public static int findMaps(byte[] binary, PluginCallback callback, Executor executor) {
     while (!initialized) {
        // If not initialized, wait.
     }
@@ -45,7 +44,7 @@ public class PluginManager {
     for (Class<? extends LocatorPlugin> pluginKlazz : plugins) {
       try {
         LocatorPlugin plugin = pluginKlazz.newInstance();
-        Display.getDefault().asyncExec(new PluginRunner(binary, callback, plugin));
+        executor.execute(new PluginRunner(binary, callback, plugin));
       }
       catch (Exception e) {
         throw new RuntimeException(e);
