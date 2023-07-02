@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
-	<id>PS@KFFPS</id>
-	<title>PSV16@KFFPS - Intake Manifold Pressure</title>
-	<pattern>7B FF 5D 02 F2 07 XX XX F6 07 XX XX E6 F1 XX XX F2 F4 MMXX XX F2 F5 XX XX E6 F7 XX XX DA|F6 F5 XX XX E6 F1 MMXX XX C2 F4 XX XX C2 F5 $$0 DA</pattern>
+	<id>PS@KFLDIMXN</id>
+	<title>PSV08@KFLDIMXN - Intake Manifold Pressure</title>
+	<pattern>0D 0D 9A XX 03 70 E6 F1 XX XX 0D 02 E6 F1 XX XX F2 F4 MMXX XX E0 87 DA|E6 F1 MMXX XX F2 F7 $$0 C0 E5 C2 F4 XX XX DA</pattern>
 	<conversion>
 		<factor>10.24</factor>
 		<signed>false</signed>

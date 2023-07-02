@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
+	<id>KFTA</id>
+	<title>KFTA - Ambient Temperature Correction</title>
+	<pattern>9A XX 03 70 E6 F1 XX XX 0D 02 E6 F1 MMXX XX F2 F5 XX XX F2 F4 XX XX E0 87 DA</pattern>
+	<conversion>
+		<factor>1</factor>
+		<signed>false</signed>
+	</conversion>
+	<rowAxis>
+		<id>NIST@KFTA</id>
+	</rowAxis>
+	<colAxis>
+		<id>TANS@KFTA</id>
+	</colAxis>
+</map>

@@ -10,7 +10,7 @@
 	<artifactId>maplocator-ui</artifactId>
 	
 	<properties>
-		<swt.version>3.120.0</swt.version>
+		<swt.version>3.123.0</swt.version>
 	</properties>
 
 	<dependencies>
