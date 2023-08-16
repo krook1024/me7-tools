@@ -9,7 +9,7 @@ public abstract class TableCategory {
 protected static final TableCategory AXES_CATEGORY = new TableCategoryAxes("Axes", 255);
 protected static final TableCategory FUEL_CATEGORY = new TableCategoryKeywords("Fuel", 101, new String[]{"KFLF"});
 protected static final TableCategory IGNITION_CATEGORY = new TableCategoryKeywords("Ignition", 102, new String[]{"KFZW"});
-protected static final TableCategory BOOST_CATEGORY = new TableCategoryKeywords("Boost", 103, new String[]{"KFDDK", "KFLDS", "LDSMXN", "KFLDHKO"});
+protected static final TableCategory BOOST_CATEGORY = new TableCategoryKeywords("Boost", 103, new String[]{"KFDDK", "KFLD", "LDSMXN", "PDDFO"});
 protected static final TableCategory INJECTOR_CATEGORY = new TableCategoryKeywords("Injector", 104, new String[]{"TVUB", "FGAT0", "TEMIN"});
 protected static final TableCategory GEAR_CATEGORY = new TableCategoryKeywords("Gearbox", 105, new String[]{"TNMAXK", "NMAXAT", "VNMAXAT"});
 protected static final TableCategory MISC_CATEGORY = new TableCategoryDefault("Misc", 106);
