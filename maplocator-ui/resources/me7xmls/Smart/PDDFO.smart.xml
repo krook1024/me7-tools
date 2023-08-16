@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
+	<id>PDDFO</id>
+	<title>PDDFO - Max Boost Pressure Limit</title>
+	<pattern>F2 FC MMXX XX 42 FC XX XX 4A 88 FE 10 5A 4E FE E0 4A FE 4E 0E 42 FC</pattern>
+	<conversion>
+		<factor>0.00004</factor>
+		<offset>-1</offset>
+		<width>2</width>
+		<endianness>LoHi</endianness>
+		<signed>false</signed>
+	</conversion>
+</map>

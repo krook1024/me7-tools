@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
-	<id>KFLDHKO</id>
-	<title>KFLDHKO - Overboost Altitude Correction</title>
-	<pattern>9D 04 E7 F1 XX XX F7 F1 XX XX E6 F1 MMXX XX F2 F5 XX XX F2 F4 XX XX E0 XX DA</pattern>
+	<id>KFZWOPT</id>
+	<title>KFZWOPT - Ignition Angle Optimal</title>
+	<pattern>8D 01 EE 38 E6 F1 MMXX XX F2 F4 XX XX F2 F5 XX XX E6 F7 XX XX DA</pattern>
 	<conversion>
-		<factor>1</factor>
-		<signed>false</signed>
+		<factor>0.75</factor>
+		<offset>-60</offset>
+		<signed>true</signed>
 	</conversion>
  	<rowAxis>
-		<id>NIST@KFLDHKO</id>
+		<id>TL8@KFZWOPT</id>
 	</rowAxis>
 	<colAxis>
-		<id>PU@KFLDHKO</id>
+		<id>NIST@KFZWOPT</id>
 	</colAxis>
 </map>
