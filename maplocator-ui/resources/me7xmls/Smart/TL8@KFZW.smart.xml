@@ -5,8 +5,7 @@
 	<title>TL8@KFZW - Load Support Points</title>
 	<pattern>F2 F4 MMXX XX F2 F5 XX XX E6 F7 10 00 E6 F1 XX XX 8A XX XX XX E6 F1 XX XX|F6 F5 XX XX E6 F1 MMXX XX C2 F4 XX XX C2 F5 $$0 DA</pattern>
 	<conversion>
-		<factor>0.0075</factor>
-		<offset>-0.7</offset>
+		<factor>0.75</factor>
 		<signed>false</signed>
 	</conversion>
 </map>
