@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns="http://prj-tuning.com/mapdef" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
+	<id>KDS</id>
+	<title>KDS - Injector Basic Adjustment Constant</title>
+	<pattern>F2 FE XX XX E6 FF XX XX 1B EF F2 FF MMXX XX 7B FF 5D</pattern>
+	<conversion>
+		<factor>0.004790</factor>
+		<width>2</width>
+		<endianness>LoHi</endianness>
+		<signed>false</signed>
+	</conversion>
+</map>
