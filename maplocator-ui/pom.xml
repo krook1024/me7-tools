@@ -5,7 +5,7 @@
 		<artifactId>me7-tools</artifactId>
 		<groupId>com.prj.tuning</groupId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>..</relativePath>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>maplocator-ui</artifactId>
 	
