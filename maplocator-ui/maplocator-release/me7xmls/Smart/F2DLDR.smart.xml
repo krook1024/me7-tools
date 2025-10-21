@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://prj-tuning.com/mapdef mapdef.xsd ">
 	<id>F2DLDR</id>
 	<title>F2DLDR - Throttle Valve Intervention Level 2</title>
-	<pattern>E6 F1 XX XX 0D 02 E6 F1 XX XX F2 F5 XX XX F2 F4 MMXX XX E0 87 DA XX XX XX F7 FA XX XX 8A XX XX XX 8A XX XX XX 8A|9A XX XX XX E6 F1 XX XX 0D 02 E6 F1 MMXX XX F2 F5 $$0 DA XX60 9A XX XX XX E6 F1 XX XX 0D 02 E6 F1 XX XX F2 F5 $$0 DA</pattern>
+	<pattern>9A XX 03 70 E6 F1 XX XX 0D 02 E6 F1 MMXX XX F2 F5 XX XX DA XX XX XX F7 FA XX XX 9A F3 04 20 E7 F1 48 00 F7 F1 XX XX 0D</pattern>
 	<conversion>
 		<factor>1</factor>
 		<signed>false</signed>
 	</conversion>
 	<colAxis>
-		<id>NISTV16</id>
+		<id>NIST@F1DLDR</id>
 	</colAxis>
 </map>

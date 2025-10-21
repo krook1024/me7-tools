@@ -5,13 +5,13 @@
 	<title>KFFPS - Pulsation Correction Load Calculation</title>
 	<pattern>7B FF 5D 02 F2 07 XX XX F6 07 XX XX E6 F1 MMXX XX F2 F4 XX XX F2 F5 XX XX E6 F7 XX XX DA</pattern>
 	<conversion>
-		<factor>1</factor>
+		<factor>0.007812</factor>
 		<signed>false</signed>
 	</conversion>
  	<rowAxis>
-		<id>NISTV16</id>
+		<id>PS@KFFPS</id>
 	</rowAxis>
 	<colAxis>
-		<id>PSV16</id>
+		<id>NIST@KFFPS</id>
 	</colAxis>
 </map>
