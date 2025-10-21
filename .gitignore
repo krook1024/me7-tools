@@ -1,6 +1,11 @@
 target
+target/
+*-release/
 /.settings
 /.classpath
 /.project
-maplocator-ui/maplocator-release
 .DS_Store
+
+.idea/
+/maplocator-ui/maplocator-release/*
+lib/

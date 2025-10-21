@@ -180,7 +180,7 @@
 							<goal>run</goal>
 						</goals>
 						<configuration>
-							<tasks>
+							<target>
 								<mkdir dir="maplocator-release/lib/swt" />
 								<mkdir dir="maplocator-release/me7xmls" />
 								<copy todir="maplocator-release/lib">
@@ -191,7 +191,7 @@
 								</copy>
 								<copy file="target/${project.build.finalName}-main.jar" tofile="maplocator-release/maplocator-ui.jar" />
 								<copy file="target/${project.build.finalName}-swt.jar" tofile="maplocator-release/lib/swt/${project.build.finalName}-swt.jar" />
-							</tasks>
+							</target>
 						</configuration>
 					</execution>
 				</executions>
